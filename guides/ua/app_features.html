@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Функції додатку OGI TTS</title>
+    <style>
+        :root {
+            --bg-color: #FFFFFF;
+            --text-color: #000000;
+            --feature-bg: #E8F5E8;
+            --tab-bg: #FFF3CD;
+            --tab-border: #FFEAA7;
+            --file-info-bg: #F0F8FF;
+            --code-bg: #F5F5F5;
+            --important-bg: #FFEAA7;
+            --important-border: #D4AC0D;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #2B2B2B;
+                --text-color: #FFFFFF;
+                --feature-bg: #3A4A3A;
+                --tab-bg: #4A3A2A;
+                --tab-border: #5A4A3A;
+                --file-info-bg: #2A3A4A;
+                --code-bg: #3A3A3A;
+                --important-bg: #4A4A2A;
+                --important-border: #6A6A3A;
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        h1 { color: #FF6B35; border-bottom: 2px solid #FF6B35; padding-bottom: 10px; }
+        h2 { color: #2E86C1; margin-top: 30px; }
+        .feature { background: var(--feature-bg); padding: 15px; margin: 10px 0; border-left: 4px solid #4CAF50; }
+        .tab-section { background: var(--tab-bg); border: 1px solid var(--tab-border); padding: 15px; border-radius: 5px; margin: 15px 0; }
+        .tab-title { font-weight: bold; color: #FF6B35; font-size: 18px; margin-bottom: 10px; }
+        .file-info { background: var(--file-info-bg); padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .code { background: var(--code-bg); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+        .important { background: var(--important-bg); padding: 10px; border-radius: 5px; margin: 10px 0; border-left: 4px solid var(--important-border); }
+    </style>
+</head>
+<body>
+    <h1>⚙️ Функції додатку OGI TTS</h1>
+
+    <div class="important">
+        <strong>OGI TTS</strong> - це багатофункціональний інструмент для роботи з текстом і мовою, що підтримує різні мови та формати.
+    </div>
+
+    <h2>📋 Основні вкладки та їх функції</h2>
+
+    <div class="tab-section">
+        <div class="tab-title">🎯 General (Головна)</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>🎤 <strong>Text-to-Speech:</strong> Перетворення тексту в мову</li>
+            <li>📂 <strong>Import Text:</strong> Завантаження тексту з файлів (.txt, .docx)</li>
+            <li>▶️ <strong>Play Audio:</strong> Прослуховування згенерованої мови</li>
+            <li>💾 <strong>Save Audio:</strong> Збереження аудіо в папку tts_audio</li>
+            <li>🌐 <strong>Translation:</strong> Переклад тексту між мовами</li>
+        </ul>
+        <div class="file-info">
+            <strong>📍 Збереження:</strong> Аудіофайли зберігаються в папку <code>tts_audio/</code> з іменами типу <code>ru_output_edgezira.wav</code>
+        </div>
+    </div>
+
+    <div class="tab-section">
+        <div class="tab-title">📊 Пакетна обробка</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>📁 <strong>Import Multiple Files:</strong> Завантаження декількох файлів одночасно</li>
+            <li>🔄 <strong>Batch Conversion:</strong> Пакетне перетворення тексту в мову</li>
+            <li>📋 <strong>Queue Management:</strong> Управління чергою завдань</li>
+            <li>📈 <strong>Progress Tracking:</strong> Відстеження прогресу обробки</li>
+        </ul>
+        <div class="file-info">
+            <strong>📍 Збереження:</strong> Кожен файл зберігається окремо в папку <code>tts_audio/</code> з унікальними іменами
+        </div>
+    </div>
+
+    <div class="tab-section">
+        <div class="tab-title">🖼️ IMG to Text (Зображення в текст)</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>📷 <strong>OCR Processing:</strong> Розпізнавання тексту на зображеннях</li>
+            <li>🔧 <strong>API Integration:</strong> Підтримка Google Vision та Azure Computer Vision</li>
+            <li>📄 <strong>Multiple Formats:</strong> Підтримка PNG, JPG, JPEG, BMP, TIFF, WebP</li>
+            <li>🌍 <strong>Multi-language:</strong> Розпізнавання тексту різними мовами</li>
+        </ul>
+        <div class="file-info">
+            <strong>📍 Збереження:</strong> Розпізнаний текст можна скопіювати або використовувати для подальшої обробки
+        </div>
+    </div>
+
+    <div class="tab-section">
+        <div class="tab-title">⚙️ Налаштування</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>🎨 <strong>Theme Selection:</strong> Вибір теми інтерфейсу (Default, OgiDark)</li>
+            <li>🌐 <strong>Language:</strong> Вибір мови інтерфейсу (English, Русский, Українська)</li>
+            <li>🔑 <strong>API Keys:</strong> Налаштування ключів для перекладів та OCR</li>
+            <li>🎵 <strong>Voice Settings:</strong> Налаштування параметрів голосу (швидкість, гучність, тон)</li>
+        </ul>
+    </div>
+
+    <div class="tab-section">
+        <div class="tab-title">📋 Журнал</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>📝 <strong>Operation Log:</strong> Журнал всіх операцій програми</li>
+            <li>📋 <strong>Copy Log:</strong> Копіювання журналу в буфер обміну</li>
+            <li>🗑️ <strong>Clear Log:</strong> Очищення журналу</li>
+            <li>🎨 <strong>Color Coding:</strong> Кольорова індикація типів повідомлень</li>
+        </ul>
+    </div>
+
+    <div class="tab-section">
+        <div class="tab-title">❓ Довідка</div>
+        <p><strong>Функції:</strong></p>
+        <ul>
+            <li>📚 <strong>API Guides:</strong> Детальні інструкції з налаштування API</li>
+            <li>🔗 <strong>External Links:</strong> Посилання на документацію провайдерів</li>
+            <li>💡 <strong>Tips & Tricks:</strong> Поради з використання</li>
+            <li>🚀 <strong>Feature Overview:</strong> Опис всіх функцій програми</li>
+        </ul>
+    </div>
+
+    <h2>📁 Робота з файлами</h2>
+
+    <div class="feature">
+        <h3>📥 Імпорт документів</h3>
+        <ul>
+            <li><strong>Підтримувані формати:</strong> .txt, .docx</li>
+            <li><strong>Кодування:</strong> UTF-8 (рекомендується)</li>
+            <li><strong>Максимальний розмір:</strong> Обмежено пам'яттю системи</li>
+            <li><strong>Пакетна обробка:</strong> До 100+ файлів одночасно</li>
+        </ul>
+    </div>
+
+    <div class="feature">
+        <h3>📤 Експорт аудіо</h3>
+        <ul>
+            <li><strong>Формат:</strong> WAV (висока якість)</li>
+            <li><strong>Папка збереження:</strong> <code>tts_audio/</code></li>
+            <li><strong>Іменування:</strong> <code>мова_output_модельголос.wav</code></li>
+            <li><strong>Приклади:</strong> <code>ru_output_edgezira.wav</code>, <code>en_output_edgearia.wav</code></li>
+        </ul>
+    </div>
+
+    <h2>🎵 Налаштування голосу</h2>
+
+    <div class="feature">
+        <h3>Параметри синтезу мови</h3>
+        <ul>
+            <li><strong>Швидкість:</strong> 0.5x - 2.0x (регулюється слайдером)</li>
+            <li><strong>Гучність:</strong> 0% - 100% (регулюється слайдером)</li>
+            <li><strong>Тон:</strong> -50Hz - +50Hz (регулюється слайдером)</li>
+            <li><strong>Голоси:</strong> Male/Female для кожної мови</li>
+            <li><strong>Мови:</strong> English, Russian, Ukrainian, Japanese</li>
+        </ul>
+    </div>
+
+    <h2>💻 Системні вимоги</h2>
+
+    <div class="feature">
+        <h3>Мінімальні вимоги</h3>
+        <ul>
+            <li><strong>ОС:</strong> Windows 10/11</li>
+            <li><strong>Python:</strong> 3.8+</li>
+            <li><strong>Пам'ять:</strong> 4GB RAM</li>
+            <li><strong>Місце на диску:</strong> 500MB</li>
+            <li><strong>Інтернет:</strong> Для API функцій</li>
+        </ul>
+    </div>
+
+    <h2>🚀 Швидкий старт</h2>
+
+    <div class="important">
+        <ol>
+            <li><strong>Встановіть залежності:</strong> <code>pip install -r requirements.txt</code></li>
+            <li><strong>Запустіть програму:</strong> <code>python main.py</code></li>
+            <li><strong>Оберіть мову та голос</strong> у випадаючих списках</li>
+            <li><strong>Введіть текст</strong> або імпортуйте файл</li>
+            <li><strong>Натисніть "Play"</strong> для прослуховування або "Save" для збереження</li>
+        </ol>
+    </div>
+
+</body>
+</html>

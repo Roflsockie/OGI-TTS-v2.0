@@ -1,0 +1,12 @@
+PyQt5
+edge-tts
+pyinstaller
+python-docx
+langdetect
+flask
+flask-cors
+requests
+google-cloud-vision
+pytesseract
+pillow
+azure-cognitiveservices-vision-computervision

@@ -1,0 +1,325 @@
+/* /////////////////////////////////////////////////////////////////////////////////////////////////
+
+ADAPTED PYDRACULA DARK THEME FOR OGI TTS INTERFACE
+Based on original PyDracula theme by Wanderson M. Pimenta
+Adapted for standard Qt MainWindow with tabs structure
+
+///////////////////////////////////////////////////////////////////////////////////////////////// */
+
+QWidget{
+	color: rgb(221, 221, 221);
+	font: 10pt "Segoe UI";
+	background-color: rgb(35, 39, 47);
+}
+
+/* Main Window Background */
+QMainWindow {
+	background-color: rgb(40, 44, 52);
+	border: 1px solid rgb(44, 49, 58);
+}
+
+/* Central Widget Background */
+#bgApp {
+	background-color: rgb(40, 44, 52);
+}
+
+/* Tab Widget */
+QTabWidget {
+	background-color: rgb(40, 44, 52);
+	color: rgb(221, 221, 221);
+}
+
+QTabWidget::pane {
+	border: 1px solid rgb(44, 49, 58);
+	background-color: rgb(33, 37, 43);
+}
+
+QTabBar::tab {
+	background-color: rgb(52, 59, 72);
+	color: rgb(221, 221, 221);
+	padding-left:4px;
+	padding-right:4px;
+	padding-bottom:2px;
+	padding-top:2px;
+	border: 1px solid rgb(44, 49, 58);
+	margin-right: 2px;
+}
+
+QTabBar::tab:selected {
+	background-color: rgb(189, 147, 249);
+	color: rgb(255, 255, 255);
+}
+
+QTabBar::tab:hover {
+	background-color: rgb(57, 65, 80);
+}
+
+/* Buttons */
+QPushButton {
+	background-color: rgb(52, 59, 72);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+}
+
+QPushButton:hover {
+	background-color: rgb(57, 65, 80);
+	border: 1px solid rgb(61, 70, 86);
+}
+
+QPushButton:pressed {
+	background-color: rgb(189, 147, 249);
+	color: rgb(255, 255, 255);
+	border: 1px solid rgb(189, 147, 249);
+}
+
+QPushButton:disabled {
+	background-color: rgb(40, 44, 52);
+	color: rgb(128, 128, 128);
+	border: 1px solid rgb(44, 49, 58);
+}
+
+QPushButton:focus {
+	border: 1px solid rgb(189, 147, 249);
+}
+
+/* Combo Boxes */
+QComboBox {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+}
+
+QComboBox:hover {
+	border: 1px solid rgb(61, 70, 86);
+}
+
+QComboBox::drop-down {
+	subcontrol-origin: padding;
+	subcontrol-position: top right;
+	width: 20px;
+	border-left: 1px solid rgb(44, 49, 58);
+	background-color: rgb(40, 44, 52);
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+}
+
+QComboBox::down-arrow {
+	border: none;
+	width: 12px;
+	height: 12px;
+	margin-right: 4px;
+	image: none;
+	background: none;
+	background-image: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23DDDDDD' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+QComboBox::down-arrow:on {
+	background-image: url("data:image/svg+xml,%3csvg width='12' height='12' viewBox='0 0 12 12' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M2 4L6 8L10 4' stroke='%23BD93F9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+}
+
+QComboBox QAbstractItemView {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	selection-background-color: rgb(189, 147, 249);
+	selection-color: rgb(255, 255, 255);
+}
+
+/* Text Areas */
+QPlainTextEdit, QTextEdit {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+	font: 11pt "Segoe UI";
+}
+
+QPlainTextEdit:focus, QTextEdit:focus {
+	border: 1px solid rgb(189, 147, 249);
+}
+
+/* Labels */
+QLabel {
+	color: rgb(221, 221, 221);
+	font: 10pt "Segoe UI";
+}
+
+/* Group Boxes */
+QGroupBox {
+	color: rgb(221, 221, 221);
+	font: 11pt "Segoe UI";
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+}
+
+QGroupBox::title {
+	subcontrol-origin: margin;
+	left: 8px;
+}
+
+/* Sliders */
+QSlider::groove:horizontal {
+	background-color: rgb(52, 59, 72);
+	height: 6px;
+	border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+	background-color: rgb(189, 147, 249);
+	width: 16px;
+	height: 16px;
+	border-radius: 8px;
+}
+
+QSlider::handle:horizontal:hover {
+	background-color: rgb(255, 121, 198);
+}
+
+QSlider::tick:horizontal {
+	background-color: rgb(100, 100, 100);
+	width: 1px;
+	height: 4px;
+	margin: 0px;
+}
+
+QSlider::sub-page:horizontal {
+	background-color: rgb(189, 147, 249);
+	border-radius: 3px;
+}
+
+/* Spin Boxes */
+QSpinBox {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+}
+
+QSpinBox:hover {
+	border: 1px solid rgb(61, 70, 86);
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+	background-color: rgb(40, 44, 52);
+	border: 1px solid rgb(44, 49, 58);
+	width: 16px;
+	border-radius: 0px;
+}
+
+QSpinBox::up-button {
+	subcontrol-origin: border;
+	subcontrol-position: top right;
+	border-top-right-radius: 3px;
+}
+
+QSpinBox::down-button {
+	subcontrol-origin: border;
+	subcontrol-position: bottom right;
+	border-bottom-right-radius: 3px;
+}
+
+QSpinBox::up-button:hover, QSpinBox::down-button:hover {
+	background-color: rgb(52, 59, 72);
+}
+
+QSpinBox::up-arrow {
+	border: none;
+	width: 10px;
+	height: 8px;
+	margin-bottom: 2px;
+	image: none;
+	background: none;
+	background-image: url("data:image/svg+xml,%3csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 7L5 1L9 7' stroke='%23DDDDDD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+QSpinBox::down-arrow {
+	border: none;
+	width: 10px;
+	height: 8px;
+	margin-top: 2px;
+	image: none;
+	background: none;
+	background-image: url("data:image/svg+xml,%3csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M1 1L5 7L9 1' stroke='%23DDDDDD' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+/* Progress Bar */
+QProgressBar {
+	background-color: rgb(52, 59, 72);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	border-radius: 4px;
+	text-align: center;
+}
+
+QProgressBar::chunk {
+	background-color: rgb(189, 147, 249);
+	border-radius: 3px;
+}
+
+/* Tooltips */
+QToolTip {
+	color: #ffffff;
+	background-color: rgba(33, 37, 43, 180);
+	border: 1px solid rgb(44, 49, 58);
+	border-left: 2px solid rgb(255, 121, 198);
+	border-radius: 4px;
+}
+
+/* Scroll Bars */
+QScrollBar:vertical {
+	background-color: rgb(40, 44, 52);
+	width: 12px;
+	border-radius: 6px;
+}
+
+QScrollBar::handle:vertical {
+	background-color: rgb(52, 59, 72);
+	border-radius: 6px;
+	min-height: 20px;
+}
+
+QScrollBar::handle:vertical:hover {
+	background-color: rgb(57, 65, 80);
+}
+
+QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical {
+	background: none;
+	border: none;
+}
+
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+/* Table Widget */
+QTableWidget {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+}
+
+QTableWidget::item {
+	background-color: rgb(33, 37, 43);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+}
+
+QTableWidget::item:selected {
+	background-color: rgb(189, 147, 249);
+	color: rgb(255, 255, 255);
+}
+
+QTableWidget QHeaderView::section {
+	background-color: rgb(52, 59, 72);
+	color: rgb(221, 221, 221);
+	border: 1px solid rgb(44, 49, 58);
+	padding: 4px;
+}

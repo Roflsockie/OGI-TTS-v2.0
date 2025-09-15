@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Налаштування Google Translate API</title>
+    <style>
+        :root {
+            --bg-color: #FFFFFF;
+            --text-color: #000000;
+            --step-bg: #F8F9FA;
+            --warning-bg: #FFF3CD;
+            --warning-border: #FFEAA7;
+            --code-bg: #E8F0FE;
+        }
+        
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg-color: #2B2B2B;
+                --text-color: #FFFFFF;
+                --step-bg: #3A3A3A;
+                --warning-bg: #4A4A2A;
+                --warning-border: #5A5A3A;
+                --code-bg: #2A2A4A;
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        h1 { color: #4285F4; border-bottom: 2px solid #4285F4; padding-bottom: 10px; }
+        h2 { color: #34A853; margin-top: 30px; }
+        .step { background: var(--step-bg); padding: 15px; margin: 10px 0; border-left: 4px solid #4285F4; }
+        .step-number { font-weight: bold; color: #4285F4; font-size: 18px; }
+        .warning { background: var(--warning-bg); border: 1px solid var(--warning-border); padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .link { color: #4285F4; text-decoration: none; font-weight: bold; }
+        .link:hover { text-decoration: underline; }
+        .code { background: var(--code-bg); padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>🌍 Налаштування Google Cloud Translate API</h1>
+
+    <div class="warning">
+        ⚠️ <strong>Важливо:</strong> Потрібен платіжний аккаунт Google Cloud. Перші 500k символів безкоштовні щомісяця.
+    </div>
+
+    <h2>📋 Крок 1: Створення Google Cloud проекту</h2>
+    <div class="step">
+        <span class="step-number">1.1</span> Перейдіть на <a href="https://console.cloud.google.com/" class="link">Google Cloud Console</a>
+        <br><span class="step-number">1.2</span> Створіть новий проект або оберіть існуючий
+        <br><span class="step-number">1.3</span> Переконайтеся, що білінг увімкнено
+    </div>
+
+    <h2>🎯 Крок 2: Увімкнення Translation API</h2>
+    <div class="step">
+        <span class="step-number">2.1</span> У лівому меню оберіть "APIs & Services" → "Library"
+        <br><span class="step-number">2.2</span> Знайдіть "Cloud Translation API" та натисніть "Enable"
+        <br><span class="step-number">2.3</span> Дочекайтеся активації (може зайняти кілька хвилин)
+    </div>
+
+    <h2>🔑 Крок 3: Створення сервісного аккаунта</h2>
+    <div class="step">
+        <span class="step-number">3.1</span> Перейдіть до "IAM & Admin" → "Service Accounts"
+        <br><span class="step-number">3.2</span> Натисніть "Create Service Account"
+        <br><span class="step-number">3.3</span> Заповніть ім'я та опис
+        <br><span class="step-number">3.4</span> Призначте роль "Cloud Translation API User"
+        <br><span class="step-number">3.5</span> Створіть JSON-ключ для аккаунта
+    </div>
+
+    <h2>⚙️ Крок 4: Налаштування в OGI TTS</h2>
+    <div class="step">
+        <span class="step-number">4.1</span> У додатку перейдіть до вкладки "Settings"
+        <br><span class="step-number">4.2</span> Оберіть "Google Cloud Translate API"
+        <br><span class="step-number">4.3</span> Вставте вміст JSON-файла ключа у поле "API Key"
+        <br><span class="step-number">4.4</span> Перевірте іконку статусу (має з'явитися ✅)
+    </div>
+
+    <h2>💡 Поради</h2>
+    <ul>
+        <li>Використовуйте сервісний аккаунт замість API ключа для безпеки</li>
+        <li>Безкоштовний ліміт: 500k символів/місяць</li>
+        <li>Підтримка 100+ мов</li>
+        <li>Висока швидкість та точність перекладу</li>
+    </ul>
+
+    <h2>🔗 Корисні посилання</h2>
+    <ul>
+        <li><a href="https://console.cloud.google.com/" class="link">Google Cloud Console</a></li>
+        <li><a href="https://cloud.google.com/translate/docs" class="link">Документація Translate API</a></li>
+        <li><a href="https://cloud.google.com/pricing" class="link">Ціни на сервіси</a></li>
+    </ul>
+</body>
+</html>

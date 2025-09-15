@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройка Azure OCR API</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+            background-color: #FFFFFF;
+            color: #000000;
+        }
+        h1 { color: #0078D4; border-bottom: 2px solid #0078D4; padding-bottom: 10px; }
+        h2 { color: #107C10; margin-top: 30px; }
+        .step { background: #F8F9FA; padding: 15px; margin: 10px 0; border-left: 4px solid #0078D4; }
+        .step-number { font-weight: bold; color: #0078D4; font-size: 18px; }
+        .warning { background: #FFF3CD; border: 1px solid #FFEAA7; padding: 10px; border-radius: 5px; margin: 10px 0; }
+        .link { color: #0078D4; text-decoration: none; font-weight: bold; }
+        .link:hover { text-decoration: underline; }
+        .code { background: #E8F0FE; padding: 2px 6px; border-radius: 3px; font-family: monospace; }
+    </style>
+</head>
+<body>
+    <h1>👁️ Настройка Azure OCR API</h1>
+
+    <div class="warning">
+        ⚠️ <strong>Важно:</strong> Azure Computer Vision имеет бесплатный tier с ограничениями по количеству запросов.
+    </div>
+
+    <h2>📋 Шаг 1: Создание Azure аккаунта</h2>
+    <div class="step">
+        <span class="step-number">1.1</span> Перейдите на <a href="https://portal.azure.com/" class="link">Azure Portal</a>
+        <br><span class="step-number">1.2</span> Создайте бесплатный аккаунт или войдите в существующий
+    </div>
+
+    <h2>🎯 Шаг 2: Создание Computer Vision ресурса</h2>
+    <div class="step">
+        <span class="step-number">2.1</span> В поиске найдите "Computer Vision" и выберите
+        <br><span class="step-number">2.2</span> Нажмите "Create" → "Computer Vision"
+        <br><span class="step-number">2.3</span> Заполните:
+        <ul>
+            <li>Subscription: выберите подписку</li>
+            <li>Resource group: создайте новую или выберите существующую</li>
+            <li>Region: East US или ближайший регион</li>
+            <li>Name: уникальное имя ресурса</li>
+            <li>Pricing tier: Free F0 (20 запросов/минута, 5000/месяц)</li>
+        </ul>
+    </div>
+
+    <h2>🔑 Шаг 3: Получение API ключей</h2>
+    <div class="step">
+        <span class="step-number">3.1</span> После создания ресурса перейдите к нему
+        <br><span class="step-number">3.2</span> В меню слева выберите "Keys and Endpoint"
+        <br><span class="step-number">3.3</span> Скопируйте KEY 1 или KEY 2
+        <br><span class="step-number">3.4</span> Скопируйте "Endpoint" URL
+    </div>
+
+    <h2>⚙️ Шаг 4: Настройка в OGI TTS</h2>
+    <div class="step">
+        <span class="step-number">4.1</span> В приложении перейдите в вкладку "IMG to Text"
+        <br><span class="step-number">4.2</span> Выберите "Azure Computer Vision" в выпадающем списке
+        <br><span class="step-number">4.3</span> Вставьте API ключ в поле "API Key"
+        <br><span class="step-number">4.4</span> Проверьте статус иконки (должна появиться ✅)
+    </div>
+
+    <h2>💡 Советы</h2>
+    <ul>
+        <li>Бесплатный tier: 5000 запросов/месяц</li>
+        <li>Поддержка OCR для 25+ языков</li>
+        <li>Дополнительные возможности: анализ изображений, распознавание лиц</li>
+        <li>Интеграция с Azure экосистемой</li>
+    </ul>
+
+    <h2>🔗 Полезные ссылки</h2>
+    <ul>
+        <li><a href="https://portal.azure.com/" class="link">Azure Portal</a></li>
+        <li><a href="https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/" class="link">Документация Computer Vision</a></li>
+        <li><a href="https://azure.microsoft.com/en-us/pricing/details/cognitive-services/computer-vision/" class="link">Цены</a></li>
+    </ul>
+</body>
+</html>
